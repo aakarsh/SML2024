@@ -231,9 +231,43 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
     Consider 
     \begin{align} 
         \Omega(\Phi_i) &= \int_0^1 |(\Phi_i)'(x)|^2 dx
-        &= \int_0^1 |D_x cos(2\pi i x)|^2 dx 
     \end{align}
-    
+
+    We know consider the case where $i=2l-1$ and $i=2l$ for $l \in [1..k]$. 
+
+    \begin{align}
+        \Omega(\Phi_{i=2l-1}) &= \int_0^1 |(\Phi_i)'(x)|^2 dx \\
+            &= \int_0^1 | (\cos(2 \pi l x ))' |^2 dx \\
+            &= \int_0^1 | -2 \pi l \sin(2 \pi l x) |^2 dx \\
+            &= \int_0^1 (4 \pi^2 l^2) \sin^2(2 \pi l x) dx \\
+            &= (4 \pi^2 l^2) \int_0^1  \sin^2(2 \pi l x) dx \\
+            &= (4 \pi^2 l^2) \int_0^1  \frac{1 - \cos(4 \pi l x)}{2} dx \\
+            &= (2 \pi^2 l^2) \int_0^1  1 - \cos(4 \pi l x) dx \\
+            &= (2 \pi^2 l^2) \left[ x - \frac{1}{4 \pi l} \sin(4 \pi l x) \right]_0^1 \\
+            &= (2 \pi^2 l^2) \left[ 1 - 0 - 0 + 0 \right] \\
+            &= 2 \pi^2 l^2\\
+        \sqrt{\Omega(\Phi_{i=2l-1})} &= \sqrt{2 \pi^2 l^2} \\
+            &= \sqrt{2} \pi l
+    \end{align}
+
+    Now consider : 
+    \begin{align}
+        \Omega(\Phi_{i=2l}) &= \int_0^1 |(\Phi_i)'(x)|^2 dx \\
+            &= \int_0^1 | (\sin(2 \pi l x ))' |^2 dx \\
+            &= \int_0^1 | 2 \pi l \cos(2 \pi l x) |^2 dx \\
+            &= \int_0^1 (4 \pi^2 l^2) \cos^2(2 \pi l x) dx \\
+            &= (4 \pi^2 l^2) \int_0^1  \cos^2(2 \pi l x) dx \\
+            &= (4 \pi^2 l^2) \int_0^1  \frac{1 + \cos(4 \pi l x)}{2} dx \\
+            &= (2 \pi^2 l^2) \int_0^1  1 + \cos(4 \pi l x) dx \\
+            &= (2 \pi^2 l^2) \left[ x + \frac{1}{4 \pi l} \sin(4 \pi l x) \right]_0^1 \\
+            &= (2 \pi^2 l^2) \left[ 1 + 0 - 0 + 0 \right] \\
+            &= 2 \pi^2 l^2\\
+        \sqrt{\Omega(\Phi_{i=2l})} &= \sqrt{2 \pi^2 l^2} \\
+            &= \sqrt{2} \pi l
+    \end{align} 
+
+    Thus the normalization constant is the same for both basis functions.
+
     \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
     modified version function \textbf{DesignMatrix = FourierBasisNormalized(X,k)}:
     \begin{enumerate}
