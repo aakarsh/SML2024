@@ -5,9 +5,9 @@
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 \graphicspath{{graphics/}}
 
-\title{Statustical Machine Learning}
+\title{Statistical Machine Learning}
 \author[Aakarsh Nair]{Aakarsh Nair\\aakarsh.nair@student.uni-tuebingen.de  \\Matriculation Number :6546577 }
-\date{Due: 1 May 2024} 
+\date{Due: 5 June 2024} 
 
 % The following package makes prettier tables.  We're all about the bling!
 \usepackage{booktabs}
@@ -44,7 +44,7 @@
 
 \section{Exercise 1: Ridge Regression}
 
-\subsection{(2 points) In the following you have to implement least squares and ridge regression (both L2-loss)}
+\subsection{1. (2 points) In the following you have to implement least squares and ridge regression (both L2-loss)}
 
 \begin{enumerate}
     \item \textbf{w = LeastSquares(Designmatrix,Y)}:
@@ -65,7 +65,96 @@
 \end{enumerate}
 
 \textbf{Answer:}
-\subsection{(1 Point) Let us assume that $d =1$. Write a function Baisis(X, k) }
+
+\subsection{2. (1 points) Let us assume that $d =1$. Write a function Basis(X, k) to generate the design matrix using 
+the orthogonal Fourier basis functions, with}
+\begin{enumerate}
+    \item input: the input data matrix $X \in \mathbb{R}^{n \times 1}$ and 
+    the maximal frequency $k$ of the Fourier basis. 
+    \item output: the design matrix $\phi \in \mathbb{R}^{n \times (2k+1)}$  
+    using the Fourier basis functions: 
+   
+    $\phi_{i,0} = 1$ for all $i = 1, . . . , n$ and 
+    $\phi_{i,2l-1} = \cos(2\pi l x_i)$ and 
+    $\phi_{i,2l} = \sin(2\pi l x_i)$ for all 
+    $i = 1, . . . , n$ and $l = 1, . . . , k$.
+\end{enumerate}
+
+\subsection{
+In the first example we have only one feature $(d = )$ 
+and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$. 
+The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$. First Plot 
+the training data $(Xtrain, Ytrain)_{i=1}^{1000}$. }
+\begin{enumerate}
+    \item \textbf{(1 Points)} Which loss functino ($L_1$ or $L_2$) is more appropriate for this
+   kind of data? Justify this by checking the data plot.  Use in the next part only the regression method
+   which your chosen loss (that is either regression or $L_1-loss$ with $L_2-regularizer$).
+    \item \textbf{(1 Points)} Use the basis function with $k=1, 2, 3, 5, 10, 15, 20$ from part b. to 
+   to fit the regularized version of the loss chosen in the previous part. Use regularization paramater $\lambda = 30$. 
+   Plot the resulting function $f_k$ (using as $x$ e.g 1000 evenly spaced points in $[0, 1]$) for all values
+   of $k$ together with the training data with: 
+
+   \begin{equation}
+        f_k(x)  = \langle \phi(x), w_k \rangle = \sum_{i=1}^{2k+1} w_i^k \phi_{i}(x)
+   \end{equation}
+
+   Compute the loss, that is 
+   \begin{equation}
+    \frac{1}{n}  \sum_{i=1}^n L(Y_i, f(X_i))
+   \end{equation}
+   on the training and test data and plot training and test loss as a function of $k$.
+   Repeat the same for $\lambda =0$ (unregularized version). How does increasing 
+   $k$ affect the estimated function $f_k$ ? What is the behavior of training and 
+   test error for increasing   $k$ (explanation on paper). 
+
+\end{enumerate}
+
+\subsection{On observes overfitting when we use large number $k$ of basis functions. We 
+want to avoid this phenomenon by introduing a normalization of the basis functions according 
+to their complexity. One possible way to do this is to define a measure of complexity $\omega(f) \in \mathbb{R}^+$ as
+
+\begin{equation}
+    \omega(f) = \int_0^1 |f'(x)|^2  dx
+\end{equation}
+
+where $f'$ is the first derivative of $f$ at x and introduce new Fourier basis functions $\{\Psi_i(x)\}_{i \in \mathbb{N}^0}$ as
+\begin{equation}
+    \Psi_0(x) = \Phi_0(x) 
+\end{equation} 
+and 
+\begin{equation}
+    \Psi_i(x) = \frac{1}{\sqrt{\omega(\phi_i)}} \Phi_i(x) 
+\end{equation}
+
+$i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and $\mathbb{N}^+ :=\mathbb{N}^0\\ \{0\}$.
+\begin{enumerate}
+    \item \textbf{(1 point)} Show the new Fourier basis functions $\Psi = \Psi_i_{ i\in \mathbb{N}^+}$ all have the same 
+    complexity $\omega(\Psi_i)$. 
+    \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
+    modified version function \textbf{DesignMatrix = FourierBasisNormalized(X,k)}:
+    \begin{enumerate}
+        \item input: the input data matrix $X \in \mathbb{R}^{n \times 1}$ and maximal frequency $k$ of the Fourier basis.
+        \item ouput: design matrix  $\Phi \in \mathbb{R}^{n \times (2k+1)}$ using the normalized Fourier basis $\{Psi_i\}_{i = 0 \dots 2k}$
+    \end{enumerate}
+    \item \textbf{(1 point)} Repeat the experiment from part c. with both old (not normalized)  basis $\Phi_i$ and 
+    the new basis function $\Psi_i$, using both least squares and ridge regression with regularization parameter $\lambda = 30$, when using 
+    $|phi_i$ and $\lambda=0.5$ when using $\Psi_i$. How does the new basis function affect the 
+    estimation of the function $f_k = \langle w^k, \Psi(x)\rangle$ ? What is the difference in 
+    terms of training and test error for the various $k$ (explanation on paper)?
+\end{enumerate}
+
+\subsection{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly 
+penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$: 
+\begin{equation}
+        w^k = argmin_{w \in \mathbb{R}^2k} \frac{1}{n} \sum_{i=1}^n (Y_i  - f_w(X_i))^2 + \lambda \omega(f_w)
+\end{equation}
+
+where $\omega(f)$ is defined in part d. Show that when using the normalized Fourier basis $\Psi_i$ without the constant 
+function $\Psi_0$ the above optimization problem is equivalent to ridge regression that is $\Omega(f_w) = ||w||^2$.
+
+Zip all plots (.png), scripts (.py), test (.pdf). In addition to the functions mentioned above, there should be scripts 
+to reproduce all the results you submit (plots, losses).
+
 \bibliography{sample-handout}
 \bibliographystyle{plainnat}
 \end{document}
