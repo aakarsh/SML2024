@@ -49,15 +49,16 @@
 \begin{enumerate}
     \item \textbf{w = LeastSquares(Designmatrix,Y)}:
     \begin{enumerate}
-    \item  input: design matrix Φ ∈ Rn×d and the outputs Y ∈ Rn (column vector)
+    \item  input: design matrix $\Phi \in R^{n \times d}$ and the outputs $Y \in \mathbb{R}^n$ (column vector)
     \item output: weight vector w of least squares regression as column vector
     \end{enumerate}
     \item  \textbf{w = RidgeRegression(Designmatrix,Y,Lambda)}:
     \begin{enumerate}
-        \item input: the design matrix Φ ∈ Rn×d, the outputs Y ∈ Rn (column vector), and the regularization
+        \item input: the design matrix $\Phi \in \mathbb{R}^n \times d$, the outputs 
+        $Y \in \mathbb{R}^n$ (column vector), and the regularization
         parameter $\lambda \in \mathbb{R}^+ := \{x \in \mathbb{R}|x \geq 0\}$.
         \item output: weight vector w of ridge regression as column vector. Use the non-normalized version
-        $w = (\phi^T \phi + \lambda \mathbb{1}_d)^{−1}\phi^T Y$ 
+        $w = {(\phi^T \phi + \lambda \mathbb{1}_d)}^{-1}\phi^T Y$ 
     \end{enumerate}
     
     Note that that the regression with L1-loss is already provided in 
@@ -130,6 +131,16 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and $\mathbb{N}^+
 \begin{enumerate}
     \item \textbf{(1 point)} Show the new Fourier basis functions $\Psi = \Psi_i_{ i\in \mathbb{N}^+}$ all have the same 
     complexity $\omega(\Psi_i)$. 
+
+    \textbf{Answer:}
+
+    Consider 
+    \begin{align} 
+        \omega(\Phi_i) &= \int_0^1 |(\Phi_i)'(x)|^2 dx$ and $\omega(\Psi_i) = \int_0^1 |(\Psi_i)'(x)|^2 dx
+        &= \int_0^1 |D_x cos(2\pi i x)|^2 dx \\
+        &=  
+    \end{align}
+    
     \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
     modified version function \textbf{DesignMatrix = FourierBasisNormalized(X,k)}:
     \begin{enumerate}
@@ -143,8 +154,10 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and $\mathbb{N}^+
     terms of training and test error for the various $k$ (explanation on paper)?
 \end{enumerate}
 
+
 \subsection{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly 
-penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$: 
+penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$:
+
 \begin{equation}
         w^k = argmin_{w \in \mathbb{R}^2k} \frac{1}{n} \sum_{i=1}^n (Y_i  - f_w(X_i))^2 + \lambda \omega(f_w)
 \end{equation}
@@ -152,8 +165,8 @@ penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\ra
 where $\omega(f)$ is defined in part d. Show that when using the normalized Fourier basis $\Psi_i$ without the constant 
 function $\Psi_0$ the above optimization problem is equivalent to ridge regression that is $\Omega(f_w) = ||w||^2$.
 
-Zip all plots (.png), scripts (.py), test (.pdf). In addition to the functions mentioned above, there should be scripts 
-to reproduce all the results you submit (plots, losses).
+Zip all plots (.png), scripts (.py), test (.pdf). In addition to the functions mentioned above, there 
+should be scripts to reproduce all the results you submit (plots, losses).
 
 \bibliography{sample-handout}
 \bibliographystyle{plainnat}

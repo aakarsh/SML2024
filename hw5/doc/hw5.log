@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 14:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -597,142 +597,46 @@ Overfull \hbox (24.87589pt too wide) in paragraph at lines 47--47
 |\T1/pplj/m/it/10.95 1. (2 points) In the fol-low-ing you have to im-ple-ment least squares and ridge
  []
 
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:52: Package inputenc Error: Unicode character Φ (U+03A6)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52     \item  input: design matrix Φ
-                                        ∈ Rn×d and the outputs Y ∈ Rn (...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:52: Package inputenc Error: Unicode character ∈ (U+2208)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52     \item  input: design matrix Φ ∈
-                                            Rn×d and the outputs Y ∈ Rn (...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 52.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pplj.fd
-File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-)
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:52: Package inputenc Error: Unicode character ∈ (U+2208)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 ... matrix Φ ∈ Rn×d and the outputs Y ∈
-                                                   Rn (column vector)
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:57: Package inputenc Error: Unicode character Φ (U+03A6)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57         \item input: the design matrix Φ
-                                               ∈ Rn×d, the outputs Y ∈ ...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:57: Package inputenc Error: Unicode character ∈ (U+2208)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57         \item input: the design matrix Φ ∈
-                                                   Rn×d, the outputs Y ∈ ...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:57: Package inputenc Error: Unicode character ∈ (U+2208)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 ...ign matrix Φ ∈ Rn×d, the outputs Y ∈
-                                                   Rn (column vector), and t...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 52.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 58.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 52.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 58.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 52.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 58.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 52.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 52.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 52.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-
-/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.tex:60: Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ... (\phi^T \phi + \lambda \mathbb{1}_d)^{−
-                                                  1}\phi^T Y$
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (2.72998pt too wide) in paragraph at lines 70--70
+Overfull \hbox (2.72998pt too wide) in paragraph at lines 71--71
 |\T1/pplj/m/it/10.95 2. (1 points) Let us as-sume that $\OML/zplm/m/it/10.95 d \OT1/zplm/m/n/10.95 = \OT1/pplx/m/n/10.95 1$\T1/pplj/m/it/10.95 . Write a func-tion Ba-sis(X, k) to
  []
 
 
-Overfull \hbox (8.7356pt too wide) in paragraph at lines 70--70
+Overfull \hbox (8.7356pt too wide) in paragraph at lines 71--71
 \T1/pplj/m/it/10.95 gen-er-ate the de-sign ma-trix us-ing the or-thog-o-nal Fourier ba-sis func-tions,
  []
 
 
-Overfull \hbox (6.5685pt too wide) in paragraph at lines 87--87
+Overfull \hbox (6.5685pt too wide) in paragraph at lines 88--88
 \T1/pplj/m/it/10.95 to learn the func-tion $\OML/zplm/m/it/10.95 f \OT1/zplm/m/n/10.95 : \U/fplmbb/m/n/10.95 R \OMS/zplm/m/n/10.95 ! \U/fplmbb/m/n/10.95 R$\T1/pplj/m/it/10.95 . The data is given in \T1/pplj/b/it/10.95 onedim.data.py
  []
 
 
-Overfull \hbox (9.46521pt too wide) in paragraph at lines 87--87
+Overfull \hbox (9.46521pt too wide) in paragraph at lines 88--88
 \T1/pplj/m/it/10.95 con-tain-ing $\OML/zplm/m/it/10.95 Xtrain\OT1/pplx/m/n/10.95 , \OML/zplm/m/it/10.95 Xtest\OT1/pplx/m/n/10.95 , \OML/zplm/m/it/10.95 Ytrain\OT1/pplx/m/n/10.95 , \OML/zplm/m/it/10.95 Ytest \OMS/zplm/m/n/10.95 2 \U/fplmbb/m/n/10.95 R[]$\T1/pplj/m/it/10.95 . First Plot the train-
  []
 
@@ -758,11 +662,11 @@ you'd better type `E' or `X' now and fix your file.
 
  
 Here is how much of TeX's memory you used:
- 12843 strings out of 478994
- 191029 string characters out of 5858183
+ 12818 strings out of 478994
+ 190661 string characters out of 5858183
  691980 words of memory out of 5000000
- 30011 multiletter control sequences out of 15000+600000
- 441451 words of font info for 98 fonts, out of 8000000 for 9000
+ 29990 multiletter control sequences out of 15000+600000
+ 441138 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,11n,91p,321b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
