@@ -69,9 +69,28 @@ def Basis(X, k):
     # print("Phi:",phi)
     return phi
 
+    
 #%%
 def FourierBasisNormalized(X, k):
-    pass
+    '''
+    
+    '''
+    print("Shape input matrix:",X.shape) 
+    # X = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_{1000} \end{bmatrix}
+    
+    phi = np.zeros((X.shape[0], 2 * k + 1)) # (1000, 21) #k = 10
+    print("Shape Design Matrix:", phi.shape)
+    for l in range(1, k + 1):
+        normalization = 1/np.sqrt(2) * np.pi * l
+        phi[:, 2 * l - 1] = normalization * np.cos(2 * np.pi * l * X) .flatten()
+        phi[:, 2 * l] = normalization * np.sin(2 * np.pi * l * X).flatten() 
+    phi[:, 0] = 1 
+    return phi
+
+def get_basis(X, k, normalized_basis=False):
+    if normalized_basis:
+        return FourierBasisNormalized(X, k)
+    return Basis(X, k)
 #%%
 def plot_data(X, Y):
     ''' plot data points
@@ -91,42 +110,46 @@ def run_plot(data, train=False, test=False):
         plot_data(data['Xtest'], data['Ytest'])
         
 #%%
-def learned_weights(X, Y, k, lmbd_reg=0., type='ridge'):
+def learned_weights(X, Y, k, lmbd_reg=0., type='ridge', normalized_basis=False):
    ''' learned_weights: learn the weights of the model, from training data with 
    k basis functions, and regularization parameter lmbd_reg.'''
-   Phi = Basis(X, k)
+   Phi = get_basis(X, k, normalized_basis)
+   
    if type == 'ridge':
     return  RidgeRegression(Phi, Y, lmbd_reg)
    elif type == 'l1':
         return pf.L1LossRegression(Phi, Y, lmbd_reg)
    raise ValueError('Unknown type: %s'%type)
 
-def plot_comparison_l1_vs_ridge(data):
+def plot_comparison_l1_vs_ridge(data, normalized_basis=False):
+    normalized_tag = 'normalized_' if normalized_basis else ''
     for k in [1,2, 3,5, 10, 15,20]:
         plt.figure(figsize=(7, 7))
         plt.scatter(data['Xtrain'], data['Ytrain'],s=1,cmap='viridis',label='Training Data')
         for type in ['ridge', 'l1']:
-            w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=30, type=type)
+            w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=30, type=type, normalized_basis=normalized_basis)
             x = np.linspace(0, 1, 1000)
-            phi = Basis(x, k)
+            phi = get_basis(x, k, normalized_basis) 
             plt.plot(x, phi @ w, label='%s Loss Regression k=%d'%(type.upper(), k))
             plt.legend(loc='upper left')
-        plt.savefig('../figures/l1_vs_ridge_regression_k_%d.png'%( k))
+        plt.savefig('../figures/%sl1_vs_ridge_regression_k_%d.png'%( normalized_tag, k))
 
-def plot_l1_for_k(data, lmdb_reg=30):
+def plot_l1_for_k(data, lmdb_reg=30, normalized_basis=False):
+    normalized_tag = 'normalized_' if normalized_basis else ''
     type = 'l1'
     fig = plt.figure(figsize=(10, 10))
     plt.scatter(data['Xtrain'], data['Ytrain'],s=1,cmap='viridis',label='Training Data')
     for k in [1,2, 3,5, 10, 15,20]:
-        w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type)
+        w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
         x = np.linspace(0, 1, 1000)
-        phi = Basis(x, k)
+        phi = get_basis(x, k, normalized_basis) 
         plt.plot(x, phi @ w, label='%s Loss Regression k=%d'%(type.upper(), k))
         plt.legend(loc='upper left')
-    plt.savefig('../figures/l1_regression_all_k.png')
+    plt.savefig('../figures/%sl1_regression_all_k.png' % normalized_tag)
     return fig
 
-def plot_l1_loss_for_k(data):
+def plot_l1_loss_for_k(data, normalized_basis=False):
+    normalized_tag = 'normalized_' if normalized_basis else ''
     type = 'l1'
     fig = plt.figure(figsize=(10, 10))
     K_VALS = [1,2, 3,5, 10, 15,20]
@@ -134,8 +157,8 @@ def plot_l1_loss_for_k(data):
         for partition in ['train', 'test']:
             l1_losses = np.zeros((len(K_VALS), 1))
             for k_idx, k in enumerate(K_VALS):
-                w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type)
-                phi = Basis(data['X%s'%partition], k)
+                w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
+                phi = get_basis(data['X%s'%partition], k, normalized_basis=normalized_basis)
                 f_X = phi @ w
                 Y = data['Y%s' % partition] 
                 l1_loss_l2_reg = np.abs(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
@@ -144,12 +167,13 @@ def plot_l1_loss_for_k(data):
             plt.ylabel('Loss', fontsize=FONT_SIZE)
             plt.plot(K_VALS,l1_losses, label='Losses : %s and Lambda: %d' % (partition.capitalize(), lmdb_reg))
     plt.legend(loc='upper left')
-    plt.savefig('../figures/l1_losses_for_k.png' )
+    plt.savefig('../figures/%sl1_losses_for_k.png' % normalized_tag)
     return fig
 #%%
 if __name__ == '__main__':
     data = np.load('../data/onedim_data.npy', allow_pickle=True).item()
-    plot_comparison_l1_vs_ridge(data)
-    plot_l1_for_k (data)
-    plot_l1_loss_for_k(data)
+    for normalized_basis in [False, True]:
+        plot_comparison_l1_vs_ridge(data, normalized_basis)
+        plot_l1_for_k(data, normalized_basis=normalized_basis)
+        plot_l1_loss_for_k(data, normalized_basis=normalized_basis)
 #%%
