@@ -59,6 +59,10 @@
     \item  input: design matrix $\Phi \in R^{n  \times d}$ and the outputs $Y \in \mathbb{R}^n$ (column vector)
     \item output: weight vector w of least squares regression as column vector
     \end{itemize}
+
+	\textbf{Answer:}
+	See \emph{ridge.py} function \emph{ LeastSquares}. 
+	
     \item  \textbf{w = RidgeRegression(Designmatrix,Y,Lambda)}:
     \begin{itemize}
         \item input: the design matrix $\Phi \in \mathbb{R}^n \times d$, the outputs 
@@ -67,12 +71,17 @@
         \item output: weight vector w of ridge regression as column vector. Use the non-normalized version
         $w = {(\phi^T \phi + \lambda \mathbb{1}_d)}^{-1}\phi^T Y$ 
     \end{itemize}
+
+       Note that that the regression with L1-loss is already provided in 
+    \textbf{L1LossRegression(Designmatrix,Y,Lambda)}\\
     
-    Note that that the regression with L1-loss is already provided in 
-        \textbf{L1LossRegression(Designmatrix,Y,Lambda)}
+    \textbf{Answer:} \\
+    See \emph{ridge.py} function \emph{ RidgeRegression}. 
+    
+ 
 \end{itemize}
 
-\textbf{Answer:}
+
 
 \item  \textbf{(1 points)} Let us assume that $d =1$. Write a function Basis(X, k) to generate the design matrix using 
 the orthogonal Fourier basis functions, with
@@ -86,6 +95,10 @@ the orthogonal Fourier basis functions, with
     $\phi_{i,2l} = \sin(2\pi l x_i)$ for all 
     $i = 1, . . . , n$ and $l = 1, . . . , k$.
 \end{itemize}
+
+\textbf{Answer:}\\
+
+See \emph{ridge.py} function \emph{ Basis}. 
 
 
 \item  In the first example we have only one feature $(d = )$ and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$.  The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$.  First Plot the training data ${(Xtrain, Ytrain)}_{i=1}^{1000}$.
