@@ -304,7 +304,7 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
     \end{enumerate}
 
     \textbf{Answer:}
-
+    See \emph{ridge.py} function \emph{ FourierBasisNormalized}.
 
     \item \textbf{(1 point)} Repeat the experiment from part c. with both old (not normalized)  basis $\Phi_i$ and 
     the new basis function $\Psi_i$, using both least squares and ridge regression with regularization parameter $\lambda = 30$, when using 
@@ -312,6 +312,8 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
     estimation of the function $f_k = \langle w^k, \Psi(x)\rangle$ ? What is the difference in 
     terms of training and test error for the various $k$ (explanation on paper)?
 \end{enumerate}
+
+    \textbf{Answer:}
 
 
 \item \textbf{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$:

@@ -172,8 +172,12 @@ def plot_l1_loss_for_k(data, normalized_basis=False):
 #%%
 if __name__ == '__main__':
     data = np.load('../data/onedim_data.npy', allow_pickle=True).item()
-    for normalized_basis in [False, True]:
-        plot_comparison_l1_vs_ridge(data, normalized_basis)
-        plot_l1_for_k(data, normalized_basis=normalized_basis)
-        plot_l1_loss_for_k(data, normalized_basis=normalized_basis)
+    plot_comparison_l1_vs_ridge(data, normalized_basis=False)
+
+    plot_l1_for_k(data, normalized_basis=False)
+    plot_l1_loss_for_k(data, normalized_basis=False)
+    
+    # Using normalized basis
+    plot_l1_for_k(data, normalized_basis=True, lmdb_reg=0.5)
+    
 #%%
