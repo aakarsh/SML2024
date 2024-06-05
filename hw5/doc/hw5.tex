@@ -306,14 +306,31 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
     \textbf{Answer:}
     See \emph{ridge.py} function \emph{ FourierBasisNormalized}.
 
-    \item \textbf{(1 point)} Repeat the experiment from part c. with both old (not normalized)  basis $\Phi_i$ and 
-    the new basis function $\Psi_i$, using both least squares and ridge regression with regularization parameter $\lambda = 30$, when using 
-    $|phi_i$ and $\lambda=0.5$ when using $\Psi_i$. How does the new basis function affect the 
-    estimation of the function $f_k = \langle w^k, \Psi(x)\rangle$ ? What is the difference in 
-    terms of training and test error for the various $k$ (explanation on paper)?
+    \item \textbf{(1 point)} Repeat the experiment from part c. with both old (not normalized) basis 
+    $\phi_i$ and the new basis function $\psi_i$, using both least squares and ridge regression 
+    with regularization parameter $\lambda = 30$, when using $phi_i$ and $\lambda=0.5$ when using $\Psi_i$. 
+
+    How does the new basis function affect the estimation of the 
+    function $f_k = \langle w^k, \Psi(x)\rangle$ ? 
+    What is the difference in terms of training and test error 
+    for the various $k$ (explanation on paper)?
 \end{enumerate}
 
-    \textbf{Answer:}
+   \textbf{Answer:}
+   \begin{figure}
+    \centering
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/normalized_l1_regression_all_k.png}
+        \caption{L1 Loss Regression for all $k$ using Nomalized Basis Functions}
+    \end{subfigure}%
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/normalized_l1_losses_for_k.png}
+        \caption{Training and Test Loss for L1 Loss Regression using Nomalized Baisis Functions}
+    \end{subfigure}
+    \caption{ Using normalized basis functions. }
+   \end{figure}
+    \FloatBarrier
+
 
 
 \item \textbf{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$:

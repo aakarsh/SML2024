@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,27 +802,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--202
 
 [4
 
- </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k.png>] [5] [6] [7] [8] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
+ </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k.png>] [5] [6] [7] [8]
+<../figures/normalized_l1_regression_all_k.png, id=131, 722.7pt x 722.7pt>
+File: ../figures/normalized_l1_regression_all_k.png Graphic file (type png)
+<use ../figures/normalized_l1_regression_all_k.png>
+Package pdftex.def Info: ../figures/normalized_l1_regression_all_k.png  used on input line 323.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+[]\T1/pplj/m/n/9 (a) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 us-ing
+ []
+
+<../figures/normalized_l1_losses_for_k.png, id=132, 722.7pt x 722.7pt>
+File: ../figures/normalized_l1_losses_for_k.png Graphic file (type png)
+<use ../figures/normalized_l1_losses_for_k.png>
+Package pdftex.def Info: ../figures/normalized_l1_losses_for_k.png  used on input line 327.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+[]\T1/pplj/m/n/9 (b) |Train-ing and Test Loss for L1 Loss
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+\T1/pplj/m/n/9 Re-gres-sion us-ing No-ma-l-ized Bai-sis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]\T1/pplj/m/n/10 Figure 3: |Us-ing nor-mal-ized
+ []
+
+[9 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
-) [9] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.aux)
+) [10] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.aux)
 Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: F71FBB3100222692AD4562F7A2FE4176;193.
  ) 
 Here is how much of TeX's memory you used:
- 14753 strings out of 478994
- 224344 string characters out of 5858183
+ 14768 strings out of 478994
+ 224904 string characters out of 5858183
  726909 words of memory out of 5000000
- 31812 multiletter control sequences out of 15000+600000
+ 31823 multiletter control sequences out of 15000+600000
  455712 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,12n,117p,402b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (9 pages, 414091 bytes).
+Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (10 pages, 517150 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 76 named destinations out of 1000 (max. 500000)
- 1073 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 1083 words of extra memory for PDF output out of 10000 (max. 10000000)
 
