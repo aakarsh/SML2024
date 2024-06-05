@@ -91,48 +91,33 @@ def get_basis(X, k, normalized_basis=False):
     if normalized_basis:
         return FourierBasisNormalized(X, k)
     return Basis(X, k)
+   
 #%%
-def plot_data(X, Y):
-    ''' plot data points
-    '''
-    plt.figure(figsize=(15, 10))
-    plt.scatter(X, Y)
-    plt.show()
-    return
-
-#%%
-def run_plot(data, train=False, test=False):
-    ''' run the plot
-    '''
-    if train:
-        plot_data(data['Xtrain'], data['Ytrain'])
-    elif test:
-        plot_data(data['Xtest'], data['Ytest'])
-        
-#%%
-def learned_weights(X, Y, k, lmbd_reg=0., type='ridge', normalized_basis=False):
+def learned_weights(X, Y, k, lmbd_reg=0, type='ridge', normalized_basis=False):
    ''' learned_weights: learn the weights of the model, from training data with 
    k basis functions, and regularization parameter lmbd_reg.'''
    Phi = get_basis(X, k, normalized_basis)
    
    if type == 'ridge':
     return  RidgeRegression(Phi, Y, lmbd_reg)
+   elif type == 'least_squares':
+        return LeastSquares(Phi, Y)
    elif type == 'l1':
         return pf.L1LossRegression(Phi, Y, lmbd_reg)
    raise ValueError('Unknown type: %s'%type)
 
-def plot_comparison_l1_vs_ridge(data, lmdb_reg=30, normalized_basis=False):
+def plot_comparison_l1_vs_ridge_vs_least_squares(data, lmdb_reg=30, normalized_basis=False):
     normalized_tag = 'normalized_' if normalized_basis else ''
     for k in [1,2, 3,5, 10, 15,20]:
         plt.figure(figsize=(7, 7))
         plt.scatter(data['Xtrain'], data['Ytrain'],s=1,cmap='viridis',label='Training Data')
-        for type in ['ridge', 'l1']:
+        for type in ['ridge', 'l1', 'least_squares']:
             w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
             x = np.linspace(0, 1, 1000)
             phi = get_basis(x, k, normalized_basis) 
             plt.plot(x, phi @ w, label='%s Loss Regression k=%d Lambda=%d'%(type.upper(), k,lmdb_reg))
             plt.legend(loc='upper left')
-        plt.savefig('../figures/%sl1_vs_ridge_regression_k_%d_lambda_%d.png'%( normalized_tag, k, lmdb_reg))
+        plt.savefig('../figures/%sl1_vs_ridge_regression_vs_least_squares_k_%d_lambda_%d.png'%( normalized_tag, k, lmdb_reg))
 
 def plot_l1_for_k(data, lmdb_reg=30, normalized_basis=False):
     normalized_tag = 'normalized_' if normalized_basis else ''
@@ -171,7 +156,7 @@ def plot_l1_loss_for_k(data, lmdb_reg=30, normalized_basis=False):
 #%%
 if __name__ == '__main__':
     data = np.load('../data/onedim_data.npy', allow_pickle=True).item()
-    plot_comparison_l1_vs_ridge(data,lmdb_reg=30, normalized_basis=False)
+    plot_comparison_l1_vs_ridge_vs_least_squares(data,lmdb_reg=30, normalized_basis=False)
 
     plot_l1_for_k(data, lmdb_reg=30, normalized_basis=False)
     plot_l1_loss_for_k(data, lmdb_reg=30, normalized_basis=False)
@@ -180,7 +165,7 @@ if __name__ == '__main__':
     plot_l1_loss_for_k(data, lmdb_reg=0, normalized_basis=False)
      
     # Using normalized basis
-    plot_comparison_l1_vs_ridge(data,lmdb_reg=0.5, normalized_basis=True)
+    plot_comparison_l1_vs_ridge_vs_least_squares(data,lmdb_reg=0.5, normalized_basis=True)
     plot_l1_for_k(data, lmdb_reg=0.5, normalized_basis=True)
     plot_l1_loss_for_k(data, lmdb_reg=0.5, normalized_basis=True)
 
