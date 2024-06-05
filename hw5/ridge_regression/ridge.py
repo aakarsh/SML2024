@@ -110,7 +110,7 @@ def plot_comparison_l1_vs_ridge(data):
             x = np.linspace(0, 1, 1000)
             phi = Basis(x, k)
             plt.plot(x, phi @ w, label='%s Loss Regression k=%d'%(type.upper(), k))
-            plt.legend()
+            plt.legend(loc='upper left')
         plt.savefig('../figures/l1_vs_ridge_regression_k_%d.png'%( k))
 
 def plot_l1_for_k(data, lmdb_reg=30):
@@ -122,7 +122,7 @@ def plot_l1_for_k(data, lmdb_reg=30):
         x = np.linspace(0, 1, 1000)
         phi = Basis(x, k)
         plt.plot(x, phi @ w, label='%s Loss Regression k=%d'%(type.upper(), k))
-        plt.legend()
+        plt.legend(loc='upper left')
     plt.savefig('../figures/l1_regression_all_k.png')
     return fig
 
@@ -143,7 +143,7 @@ def plot_l1_loss_for_k(data):
             plt.xlabel('k', fontsize=FONT_SIZE)    
             plt.ylabel('Loss', fontsize=FONT_SIZE)
             plt.plot(K_VALS,l1_losses, label='Losses : %s and Lambda: %d' % (partition.capitalize(), lmdb_reg))
-    plt.legend()
+    plt.legend(loc='upper left')
     plt.savefig('../figures/l1_losses_for_k.png' )
     return fig
 #%%

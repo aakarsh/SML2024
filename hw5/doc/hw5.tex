@@ -88,7 +88,7 @@ the orthogonal Fourier basis functions, with
 \end{itemize}
 
 
-\item In the first example we have only one feature $(d = )$ and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$.  The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$.  First Plot the training data ${(Xtrain, Ytrain)}_{i=1}^{1000}$.
+\item  In the first example we have only one feature $(d = )$ and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$.  The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$.  First Plot the training data ${(Xtrain, Ytrain)}_{i=1}^{1000}$.
 
 \begin{enumerate}
     \item \textbf{(1 Points)} Which loss functino ($L_1$ or $L_2$) is more appropriate for this
@@ -164,14 +164,28 @@ the orthogonal Fourier basis functions, with
    $k$ (explanation on paper). 
 
    \textbf{Answer:} \\
+
+   We note that increasing the value of $k$ increases the function expressivity it 
+   becomes rougher and begins to overfit to training data. This can be seen in 
+   the loss curves, where th test loss fails to go down after $k=5$ while the training
+   loss continues to decrease. This effect is more pronounced without regularization. 
+   Where we note the curve for non-regularized Train loss has lowest value as $k$ 
+   increases.
+   
    \begin{figure}
     \centering
     \begin{subfigure}[b]{.5\textwidth}
         \includegraphics{../figures/l1_regression_all_k.png}
+        \caption{L1 Loss Regression for all $k$}
     \end{subfigure}%
     \begin{subfigure}[b]{.5\textwidth}
         \includegraphics{../figures/l1_losses_for_k.png}
+        \caption{Training and Test Loss for L1 Loss Regression.
+        }
     \end{subfigure}
+    \caption{Note that Test loss stabilizes around k=5 
+    and increases subsequently. Also note that overfitting is 
+    worse for Lambda=0 vs Lambda=30}
    \end{figure}
     \FloatBarrier
 
