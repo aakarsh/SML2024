@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 22:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,79 +811,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--204
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/pplj/m/n/10 Figure 2: |Note that Test loss
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 sta-bi-lizes around k=5 and in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 creases sub-se-quently, while
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 train-ing loss con-tin-ues to de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 crease. We note that $\OML/zplm/m/it/10 ^^U$\T1/pplj/m/n/10 =30 reg-is-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 ters a higher train-ing loss than
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \OML/zplm/m/it/10 ^^U$\T1/pplj/m/n/10 =0 as reg-u-lar-iza-tion slows
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/pplj/m/n/10 down over-fit-ting to train-ing
  []
 
 [4
 
 ] [5 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_0.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_0.png>] [6] [7] [8] [9]
-<../figures/normalized_l1_regression_all_k.png, id=139, 722.7pt x 722.7pt>
-File: ../figures/normalized_l1_regression_all_k.png Graphic file (type png)
-<use ../figures/normalized_l1_regression_all_k.png>
-Package pdftex.def Info: ../figures/normalized_l1_regression_all_k.png  used on input line 333.
+<../figures/normalized_l1_regression_all_k_lambda_0.50.png, id=139, 722.7pt x 722.7pt>
+File: ../figures/normalized_l1_regression_all_k_lambda_0.50.png Graphic file (type png)
+<use ../figures/normalized_l1_regression_all_k_lambda_0.50.png>
+Package pdftex.def Info: ../figures/normalized_l1_regression_all_k_lambda_0.50.png  used on input line 332.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
 []\T1/pplj/m/n/9 (a) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 us-ing
  []
 
-<../figures/normalized_l1_losses_for_k.png, id=140, 722.7pt x 722.7pt>
-File: ../figures/normalized_l1_losses_for_k.png Graphic file (type png)
-<use ../figures/normalized_l1_losses_for_k.png>
-Package pdftex.def Info: ../figures/normalized_l1_losses_for_k.png  used on input line 337.
+<../figures/normalized_l1_losses_for_k_lambda_0.50.png, id=140, 722.7pt x 722.7pt>
+File: ../figures/normalized_l1_losses_for_k_lambda_0.50.png Graphic file (type png)
+<use ../figures/normalized_l1_losses_for_k_lambda_0.50.png>
+Package pdftex.def Info: ../figures/normalized_l1_losses_for_k_lambda_0.50.png  used on input line 336.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 []\T1/pplj/m/n/9 (b) |Train-ing and Test Loss for L1 Loss
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 \T1/pplj/m/n/9 Re-gres-sion us-ing No-ma-l-ized Bai-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 []\T1/pplj/m/n/10 Figure 3: |Us-ing nor-mal-ized
  []
 
-[10 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
+[10 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k_lambda_0.50.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k_lambda_0.50.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
@@ -893,14 +893,14 @@ Package rerunfilecheck Info: File `hw5.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  14781 strings out of 478994
- 226511 string characters out of 5858183
- 726909 words of memory out of 5000000
+ 226655 string characters out of 5858183
+ 727909 words of memory out of 5000000
  31833 multiletter control sequences out of 15000+600000
  455712 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,12n,117p,446b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (11 pages, 641549 bytes).
+Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (11 pages, 635140 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  167 compressed objects within 2 object streams

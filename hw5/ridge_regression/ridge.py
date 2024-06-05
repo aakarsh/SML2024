@@ -115,60 +115,89 @@ def plot_comparison_l1_vs_ridge_vs_least_squares(data, lmdb_reg=30, normalized_b
             w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
             x = np.linspace(0, 1, 1000)
             phi = get_basis(x, k, normalized_basis) 
-            plt.plot(x, phi @ w, label='%s Loss Regression k=%d Lambda=%d'%(type.upper(), k,lmdb_reg))
+            plt.plot(x, phi @ w, label='%s Loss Regression k=%d Lambda=%.2f'%(type.upper(), k,lmdb_reg))
             plt.legend(loc='upper left')
-        plt.savefig('../figures/%sl1_vs_ridge_regression_vs_least_squares_k_%d_lambda_%d.png'%( normalized_tag, k, lmdb_reg))
+        plt.savefig('../figures/%sl1_vs_ridge_regression_vs_least_squares_k_%d_lambda_%.2f.png'%( normalized_tag, k, lmdb_reg))
 
-def plot_l1_for_k(data, lmdb_reg=30, normalized_basis=False):
+def plot_for_k(data, type='l1', lmdb_reg=30, normalized_basis=False):
     normalized_tag = 'normalized_' if normalized_basis else ''
-    type = 'l1'
     fig = plt.figure(figsize=(10, 10))
     plt.scatter(data['Xtrain'], data['Ytrain'],s=1,cmap='viridis',label='Training Data')
     for k in [1,2, 3,5, 10, 15,20]:
         w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
         x = np.linspace(0, 1, 1000)
         phi = get_basis(x, k, normalized_basis) 
-        plt.plot(x, phi @ w, label='%s Loss Regression k=%d Lambda=%d'%(type.upper(), k, lmdb_reg))
+        plt.plot(x, phi @ w, label='%s Loss Regression k=%d Lambda=%.2f'%(type.upper(), k, lmdb_reg))
         plt.legend(loc='upper left')
-    plt.savefig('../figures/%sl1_regression_all_k_lambda_%d.png' % (normalized_tag, lmdb_reg))
+    plt.savefig('../figures/%s%s_regression_all_k_lambda_%.2f.png' % (normalized_tag, type, lmdb_reg))
     return fig
 
-def plot_l1_loss_for_k(data, lmdb_reg=30, normalized_basis=False):
+def get_loss_for_type(type, f_X, Y, w, lmdb_reg):
+    if type == 'l1':
+        return np.abs(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
+    elif type == 'ridge':
+       return np.square(f_X - Y).sum + lmdb_reg * (w ** 2).sum()
+    elif type == 'least_squares':
+       return np.square(f_X - Y).sum()
+   
+def plot_loss_for_k(data,type='l1',  lmdb_reg=30, normalized_basis=False):
     normalized_tag = 'normalized_' if normalized_basis else ''
-    type = 'l1'
     fig = plt.figure(figsize=(10, 10))
     K_VALS = [1,2, 3,5, 10, 15,20]
     for partition in ['train', 'test']:
-        l1_losses = np.zeros((len(K_VALS), 1))
+        losses = np.zeros((len(K_VALS), 1))
         for k_idx, k in enumerate(K_VALS):
             w = learned_weights(data['Xtrain'], data['Ytrain'],k=k, lmbd_reg=lmdb_reg, type=type, normalized_basis=normalized_basis)
             phi = get_basis(data['X%s'%partition], k, normalized_basis=normalized_basis)
             f_X = phi @ w
             Y = data['Y%s' % partition] 
-            l1_loss_l2_reg = np.abs(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
-            l1_losses[k_idx] = l1_loss_l2_reg
+            #l1_loss_l2_reg = np.abs(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
+            losses[k_idx] = get_loss_for_type(type, f_X, Y, w, lmdb_reg) 
         plt.xlabel('k', fontsize=FONT_SIZE)    
         plt.ylabel('Loss', fontsize=FONT_SIZE)
-        plt.plot(K_VALS,l1_losses, label='Losses : %s and Lambda: %d' % (partition.capitalize(), lmdb_reg))
+        plt.plot(K_VALS,losses, label='Losses : %s and Lambda: %.2f' % (partition.capitalize(), lmdb_reg))
     plt.legend(loc='upper left')
-    plt.savefig('../figures/%sl1_losses_for_k_lambda_%d.png' % (normalized_tag, lmdb_reg))
+    plt.savefig('../figures/%s%s_losses_for_k_lambda_%.2f.png' % (normalized_tag, type, lmdb_reg))
     return fig
 #%%
 if __name__ == '__main__':
     data = np.load('../data/onedim_data.npy', allow_pickle=True).item()
     plot_comparison_l1_vs_ridge_vs_least_squares(data,lmdb_reg=30, normalized_basis=False)
+    # lambda = 30
+    plot_for_k(data,type='l1', lmdb_reg=30, normalized_basis=False)
+    plot_for_k(data,type='ridge', lmdb_reg=30, normalized_basis=False)
+    plot_for_k(data,type='least_squares', lmdb_reg=30, normalized_basis=False)
+    
+    plot_loss_for_k(data,type='l1', lmdb_reg=30, normalized_basis=False)
+    plot_loss_for_k(data,type='ridge', lmdb_reg=30, normalized_basis=False)
+    plot_loss_for_k(data,type='least_squares', lmdb_reg=30, normalized_basis=False)
 
-    plot_l1_for_k(data, lmdb_reg=30, normalized_basis=False)
-    plot_l1_loss_for_k(data, lmdb_reg=30, normalized_basis=False)
-
-    plot_l1_for_k(data, lmdb_reg=0, normalized_basis=False)
-    plot_l1_loss_for_k(data, lmdb_reg=0, normalized_basis=False)
+    # lambda = 0.0
+    plot_for_k(data,type='l1', lmdb_reg=0, normalized_basis=False)
+    plot_for_k(data,type='ridge', lmdb_reg=0, normalized_basis=False)
+    plot_for_k(data,type='least_squares', lmdb_reg=0, normalized_basis=False)
+    
+    plot_loss_for_k(data, type='l1', lmdb_reg=0, normalized_basis=False)
+    plot_loss_for_k(data, type='ridge', lmdb_reg=0, normalized_basis=False)
+    plot_loss_for_k(data, type='least_squares', lmdb_reg=0, normalized_basis=False)
      
     # Using normalized basis
     plot_comparison_l1_vs_ridge_vs_least_squares(data,lmdb_reg=0.5, normalized_basis=True)
-    plot_l1_for_k(data, lmdb_reg=0.5, normalized_basis=True)
-    plot_l1_loss_for_k(data, lmdb_reg=0.5, normalized_basis=True)
+    # lambda = 0.5
+    plot_for_k(data,type='l1', lmdb_reg=0.5, normalized_basis=True)
+    plot_for_k(data,type='ridge', lmdb_reg=0.5, normalized_basis=True)
+    plot_for_k(data,type='least_squares', lmdb_reg=0.5, normalized_basis=True)
+    
+    plot_loss_for_k(data, type='l1', lmdb_reg=0.5, normalized_basis=True)
+    plot_loss_for_k(data, type='ridge', lmdb_reg=0.5, normalized_basis=True)
+    plot_loss_for_k(data, type='least_squares', lmdb_reg=0.5, normalized_basis=True)
 
-    plot_l1_for_k(data, lmdb_reg=0, normalized_basis=True)
-    plot_l1_loss_for_k(data, lmdb_reg=0, normalized_basis=True)
+    #lambda = 0
+    plot_for_k(data,type='l1', lmdb_reg=0.0, normalized_basis=True)
+    plot_for_k(data,type='ridge', lmdb_reg=0.0, normalized_basis=True)
+    plot_for_k(data,type='least_squares', lmdb_reg=0.0, normalized_basis=True)
+    
+    plot_loss_for_k(data, type='l1', lmdb_reg=0.0, normalized_basis=True)
+    plot_loss_for_k(data, type='ridge', lmdb_reg=0.0, normalized_basis=True)
+    plot_loss_for_k(data, type='least_squares', lmdb_reg=0.0, normalized_basis=True)
 #%%

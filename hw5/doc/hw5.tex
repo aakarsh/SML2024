@@ -205,17 +205,16 @@ See \emph{ridge.py} function \emph{ Basis}.
     \end{subfigure}
 
     \caption{Note that Test loss stabilizes around k=5 
-    and increases subsequently, while training loss 
-    continues to decrease. We note that $\lambda$=30 registers a higher 
-    training  loss than $\lambda$=0 as regularization slows down 
-    overfitting to training data.}
+    and increases subsequently, while training loss continues to decrease. 
+    We note that $\lambda$=30 registers a higher training  loss than $\lambda$=0 as 
+    regularization slows down overfitting to training data.}
    \end{figure}
-    \FloatBarrier
-
+   \FloatBarrier
 \end{enumerate}
 \FloatBarrier
+
 \item On observes overfitting when we use large number $k$ of basis functions. We 
-want to avoid this phenomenon by introduing a normalization of the basis functions according 
+want to avoid this phenomenon by introducing a normalization of the basis functions according 
 to their complexity. One possible way to do this is to define a measure of complexity $\Omega(f) \in \mathbb{R}^+$ as
 
 \begin{equation}
@@ -306,7 +305,7 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
     \end{align}
         
 
-    \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
+    \item \textbf{(1 point)} Derive the explicit form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
     modified version function \textbf{DesignMatrix = FourierBasisNormalized(X,k)}:
     \begin{enumerate}
         \item input: the input data matrix $X \in \mathbb{R}^{n \times 1}$ and maximal frequency $k$ of the Fourier basis.
@@ -330,11 +329,11 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
    \begin{figure}
     \centering
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics{../figures/normalized_l1_regression_all_k.png}
+        \includegraphics{../figures/normalized_l1_regression_all_k_lambda_0.50.png}
         \caption{L1 Loss Regression for all $k$ using Nomalized Basis Functions}
     \end{subfigure}%
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics{../figures/normalized_l1_losses_for_k.png}
+        \includegraphics{../figures/normalized_l1_losses_for_k_lambda_0.50.png}
         \caption{Training and Test Loss for L1 Loss Regression using Nomalized Baisis Functions}
     \end{subfigure}
     \caption{ Using normalized basis functions. }
