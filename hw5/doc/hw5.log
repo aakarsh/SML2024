@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,10 +669,10 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../figures/l1_vs_ridge_regression_k_1.png, id=26, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_1.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_1.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_1.png  used on input line 121.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png, id=26, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png  used on input line 121.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 121--122
@@ -691,50 +691,50 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 122.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 122.
-<../figures/l1_vs_ridge_regression_k_2.png, id=28, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_2.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_2.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_2.png  used on input line 127.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png, id=28, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png  used on input line 127.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 127--128
  [][] 
  []
 
-<../figures/l1_vs_ridge_regression_k_3.png, id=29, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_3.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_3.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_3.png  used on input line 132.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png, id=29, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png  used on input line 132.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
-<../figures/l1_vs_ridge_regression_k_5.png, id=30, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_5.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_5.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_5.png  used on input line 138.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png, id=30, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png  used on input line 138.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 138--139
  [][] 
  []
 
-<../figures/l1_vs_ridge_regression_k_10.png, id=31, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_10.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_10.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_10.png  used on input line 143.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png, id=31, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png  used on input line 143.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-<../figures/l1_vs_ridge_regression_k_15.png, id=32, 505.89pt x 505.89pt>
-File: ../figures/l1_vs_ridge_regression_k_15.png Graphic file (type png)
-<use ../figures/l1_vs_ridge_regression_k_15.png>
-Package pdftex.def Info: ../figures/l1_vs_ridge_regression_k_15.png  used on input line 149.
+<../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png, id=32, 505.89pt x 505.89pt>
+File: ../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png Graphic file (type png)
+<use ../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png  used on input line 149.
 (pdftex.def)             Requested size: 187.19952pt x 187.19952pt.
 
 Overfull \hbox (31.19952pt too wide) in paragraph at lines 149--150
@@ -743,117 +743,167 @@ Overfull \hbox (31.19952pt too wide) in paragraph at lines 149--150
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
-[]\T1/pplj/m/n/10 Figure 1: |Com-par-i-son of L1 and
+[]\T1/pplj/m/n/10 Figure 1: |Com-par-i-son of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
-\T1/pplj/m/n/10 Ridge Re-gres-sion for dif-fer-ent
+\T1/pplj/m/n/10 L1, Ridge Re-gres-sion, Least
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
-\T1/pplj/m/n/10 note that that ridge re-gres-sion
+\T1/pplj/m/n/10 Squares for dif-fer-ent val-ues of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
-\T1/pplj/m/n/10 in-tro-duces a bias to-wards the
+\T1/pplj/m/n/10 that ridge re-gres-sion in-tro-duces
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/pplj/m/n/10 a bias to-wards the out-liers in
  []
 
 
 LaTeX Warning: Float too large for page by 18.59857pt on input line 155.
 
-[2] [3 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_1.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_2.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_3.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_5.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_10.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_k_15.png>]
-<../figures/l1_regression_all_k.png, id=50, 722.7pt x 722.7pt>
-File: ../figures/l1_regression_all_k.png Graphic file (type png)
-<use ../figures/l1_regression_all_k.png>
-Package pdftex.def Info: ../figures/l1_regression_all_k.png  used on input line 191.
-(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
-<../figures/l1_losses_for_k.png, id=51, 722.7pt x 722.7pt>
-File: ../figures/l1_losses_for_k.png Graphic file (type png)
-<use ../figures/l1_losses_for_k.png>
-Package pdftex.def Info: ../figures/l1_losses_for_k.png  used on input line 195.
+[2] [3 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png>]
+<../figures/l1_regression_all_k_lambda_30.png, id=50, 722.7pt x 722.7pt>
+File: ../figures/l1_regression_all_k_lambda_30.png Graphic file (type png)
+<use ../figures/l1_regression_all_k_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_regression_all_k_lambda_30.png  used on input line 191.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+[]\T1/pplj/m/n/9 (a) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 and
+ []
+
+<../figures/l1_losses_for_k_lambda_30.png, id=51, 722.7pt x 722.7pt>
+File: ../figures/l1_losses_for_k_lambda_30.png Graphic file (type png)
+<use ../figures/l1_losses_for_k_lambda_30.png>
+Package pdftex.def Info: ../figures/l1_losses_for_k_lambda_30.png  used on input line 195.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 []\T1/pplj/m/n/9 (b) |Train-ing and Test Loss for L1 Loss
  []
 
+<../figures/l1_regression_all_k_lambda_0.png, id=52, 722.7pt x 722.7pt>
+File: ../figures/l1_regression_all_k_lambda_0.png Graphic file (type png)
+<use ../figures/l1_regression_all_k_lambda_0.png>
+Package pdftex.def Info: ../figures/l1_regression_all_k_lambda_0.png  used on input line 199.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]\T1/pplj/m/n/9 (c) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 and
+ []
+
+<../figures/l1_losses_for_k_lambda_0.png, id=53, 722.7pt x 722.7pt>
+File: ../figures/l1_losses_for_k_lambda_0.png Graphic file (type png)
+<use ../figures/l1_losses_for_k_lambda_0.png>
+Package pdftex.def Info: ../figures/l1_losses_for_k_lambda_0.png  used on input line 203.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+[]\T1/pplj/m/n/9 (d) |Train-ing and Test Loss for L1 Loss
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/pplj/m/n/10 Figure 2: |Note that Test loss
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/pplj/m/n/10 sta-bi-lizes around k=5 and in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-\T1/pplj/m/n/10 creases sub-se-quently. Also note
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/pplj/m/n/10 creases sub-se-quently, while
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-\T1/pplj/m/n/10 that over-fit-ting is worse for
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/pplj/m/n/10 train-ing loss con-tin-ues to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/pplj/m/n/10 crease. We note that $\OML/zplm/m/it/10 ^^U$\T1/pplj/m/n/10 =30 reg-is-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/pplj/m/n/10 ters a higher train-ing loss than
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\OML/zplm/m/it/10 ^^U$\T1/pplj/m/n/10 =0 as reg-u-lar-iza-tion slows
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/pplj/m/n/10 down over-fit-ting to train-ing
  []
 
 [4
 
- </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k.png>] [5] [6] [7] [8]
-<../figures/normalized_l1_regression_all_k.png, id=131, 722.7pt x 722.7pt>
+] [5 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_0.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_0.png>] [6] [7] [8] [9]
+<../figures/normalized_l1_regression_all_k.png, id=139, 722.7pt x 722.7pt>
 File: ../figures/normalized_l1_regression_all_k.png Graphic file (type png)
 <use ../figures/normalized_l1_regression_all_k.png>
-Package pdftex.def Info: ../figures/normalized_l1_regression_all_k.png  used on input line 323.
+Package pdftex.def Info: ../figures/normalized_l1_regression_all_k.png  used on input line 333.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
 []\T1/pplj/m/n/9 (a) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 us-ing
  []
 
-<../figures/normalized_l1_losses_for_k.png, id=132, 722.7pt x 722.7pt>
+<../figures/normalized_l1_losses_for_k.png, id=140, 722.7pt x 722.7pt>
 File: ../figures/normalized_l1_losses_for_k.png Graphic file (type png)
 <use ../figures/normalized_l1_losses_for_k.png>
-Package pdftex.def Info: ../figures/normalized_l1_losses_for_k.png  used on input line 327.
+Package pdftex.def Info: ../figures/normalized_l1_losses_for_k.png  used on input line 337.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 []\T1/pplj/m/n/9 (b) |Train-ing and Test Loss for L1 Loss
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 \T1/pplj/m/n/9 Re-gres-sion us-ing No-ma-l-ized Bai-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []\T1/pplj/m/n/10 Figure 3: |Us-ing nor-mal-ized
  []
 
-[9 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
+[10 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
-) [10] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.aux)
+) [11] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.aux)
 Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: F71FBB3100222692AD4562F7A2FE4176;193.
  ) 
 Here is how much of TeX's memory you used:
- 14768 strings out of 478994
- 224904 string characters out of 5858183
+ 14781 strings out of 478994
+ 226511 string characters out of 5858183
  726909 words of memory out of 5000000
- 31823 multiletter control sequences out of 15000+600000
+ 31833 multiletter control sequences out of 15000+600000
  455712 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,12n,117p,402b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 92i,12n,117p,446b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (10 pages, 517150 bytes).
+Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (11 pages, 641549 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 78 named destinations out of 1000 (max. 500000)
- 1083 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 1093 words of extra memory for PDF output out of 10000 (max. 10000000)
 

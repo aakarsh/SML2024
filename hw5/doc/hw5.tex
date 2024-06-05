@@ -118,39 +118,39 @@ See \emph{ridge.py} function \emph{ Basis}.
         \centering
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_1.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_1_lambda_30.png}
           \caption{$k=1$}
         \end{subfigure}%
         \hfill
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_2.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_2_lambda_30.png}
           \caption{$k=2$}
         \end{subfigure}
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_3.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_3_lambda_30.png}
           \caption{$k=3$}
         \end{subfigure}%
         \hfill
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_5.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_5_lambda_30.png}
           \caption{$k=5$}
         \end{subfigure}
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_10.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_10_lambda_30.png}
           \caption{$k=10$}
         \end{subfigure}%
         \hfill
         \begin{subfigure}[b]{.5\textwidth}
           \centering
-          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_15.png}
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_vs_least_squares_k_15_lambda_30.png}
           \caption{$k=15$}
         \end{subfigure}
         \hfill
-        \caption{Comparison of L1 and Ridge Regression for different values of $k=1,2,3,5,10,15$. We note 
+        \caption{Comparison of L1,  Ridge Regression, Least Squares for different values of $k=1,2,3,5,10,15$. We note 
         that that ridge regression introduces a bias towards the outliers in the data}
     \end{figure}
     \FloatBarrier
@@ -188,17 +188,27 @@ See \emph{ridge.py} function \emph{ Basis}.
    \begin{figure}
     \centering
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics{../figures/l1_regression_all_k.png}
-        \caption{L1 Loss Regression for all $k$}
+        \includegraphics{../figures/l1_regression_all_k_lambda_30.png}
+        \caption{L1 Loss Regression for all $k$ and $\lambda=30$.}
     \end{subfigure}%
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics{../figures/l1_losses_for_k.png}
-        \caption{Training and Test Loss for L1 Loss Regression.
-        }
+        \includegraphics{../figures/l1_losses_for_k_lambda_30.png}
+        \caption{Training and Test Loss for L1 Loss Regression and $\lambda=30$}
     \end{subfigure}
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/l1_regression_all_k_lambda_0.png}
+        \caption{L1 Loss Regression for all $k$ and $\lambda=0$.}
+    \end{subfigure}%
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/l1_losses_for_k_lambda_0.png}
+        \caption{Training and Test Loss for L1 Loss Regression and $\lambda=0$}
+    \end{subfigure}
+
     \caption{Note that Test loss stabilizes around k=5 
-    and increases subsequently. Also note that overfitting is 
-    worse for Lambda=0 vs Lambda=30}
+    and increases subsequently, while training loss 
+    continues to decrease. We note that $\lambda$=30 registers a higher 
+    training  loss than $\lambda$=0 as regularization slows down 
+    overfitting to training data.}
    \end{figure}
     \FloatBarrier
 

@@ -12,7 +12,7 @@ sys.path.append(os.path.abspath(os.path.join('..')))
 import ridge_regression.provided_functions as pf
 
 sns.set_style('whitegrid')
-FONT_SIZE= 16
+FONT_SIZE= 15
 font ={ 'size'   : FONT_SIZE}
 
 matplotlib.rc('font', **font)
@@ -171,5 +171,4 @@ if __name__ == '__main__':
 
     plot_l1_for_k(data, lmdb_reg=0, normalized_basis=True)
     plot_l1_loss_for_k(data, lmdb_reg=0, normalized_basis=True)
-     
 #%%
