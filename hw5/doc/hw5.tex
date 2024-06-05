@@ -268,12 +268,44 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and
 
     Thus the normalization constant is the same for both basis functions.
 
+    Now we consider the complexity of the new basis functions $\Psi_i$:
+    \begin{align}
+            \Omega(\Psi_{i=2l-1}) &= \int_0^1 |(\Psi_i)'(x)|^2 dx \\
+             &= \int_0^1 | \frac{1}{\sqrt{\Omega(\Phi_{i=2l-1})}} (\Phi_{i=2l-1})'(x) |^2 dx \\
+             &= \int_0^1 | \frac{1}{\sqrt{2} \pi l} (-2 \pi l \sin(2 \pi l x)) |^2 dx \\
+             &= \int_0^1 | \sqrt{2} \sin(2 \pi l x) |^2 dx \\
+             &= \int_0^1 2 \sin^2(2 \pi l x) dx \\
+             &= 2 \int_0^1 \frac{1 - \cos(4 \pi l x)}{2} dx \\
+             &= \int_0^1 1 - \cos(4 \pi l x) dx \\
+             &= \left[ x - \frac{1}{4 \pi l} \sin(4 \pi l x) \right]_0^1 \\
+             &= 1 - 0 - 0 + 0 \\
+             &= 1
+    \end{align}
+    Similarly for $\Psi_{i=2l}$ we derive the complexity as :
+    \begin{align}
+        \Omega(\Psi_{i=2l}) &= \int_0^1 |(\Psi_i)'(x)|^2 dx \\
+             &= \int_0^1 | \frac{1}{\sqrt{\Omega(\Phi_{i=2l})}} (\Phi_{i=2l})'(x) |^2 dx \\
+             &= \int_0^1 | \frac{1}{\sqrt{2} \pi l} (2 \pi l \cos(2 \pi l x)) |^2 dx \\
+             &= \int_0^1 | \sqrt{2} \cos(2 \pi l x) |^2 dx \\
+             &= \int_0^1 2 \cos^2(2 \pi l x) dx \\
+             &= 2 \int_0^1 \frac{1 + \cos(4 \pi l x)}{2} dx \\
+             &= \int_0^1 1 + \cos(4 \pi l x) dx \\
+             &= \left[ x + \frac{1}{4 \pi l} \sin(4 \pi l x) \right]_0^1 \\
+             &= 1 - 0 - 0 + 0 \\
+             &= 1
+    \end{align}
+        
+
     \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
     modified version function \textbf{DesignMatrix = FourierBasisNormalized(X,k)}:
     \begin{enumerate}
         \item input: the input data matrix $X \in \mathbb{R}^{n \times 1}$ and maximal frequency $k$ of the Fourier basis.
-        \item ouput: design matrix  $\Phi \in \mathbb{R}^{n \times (2k+1)}$ using the normalized Fourier basis $\{Psi_i\}_{i = 0 \dots 2k}$
+        \item output: design matrix  $\Phi \in \mathbb{R}^{n \times (2k+1)}$ using the normalized Fourier basis $\{Psi_i\}_{i = 0 \dots 2k}$
     \end{enumerate}
+
+    \textbf{Answer:}
+
+
     \item \textbf{(1 point)} Repeat the experiment from part c. with both old (not normalized)  basis $\Phi_i$ and 
     the new basis function $\Psi_i$, using both least squares and ridge regression with regularization parameter $\lambda = 30$, when using 
     $|phi_i$ and $\lambda=0.5$ when using $\Psi_i$. How does the new basis function affect the 
