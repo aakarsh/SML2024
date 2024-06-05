@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.22)  5 JUN 2024 23:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,37 +853,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--211
 [4
 
 ] [5 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_30.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_regression_all_k_lambda_0.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/l1_losses_for_k_lambda_0.png>] [6] [7] [8] [9]
-<../figures/normalized_l1_regression_all_k_lambda_0.50.png, id=139, 722.7pt x 722.7pt>
+<../figures/normalized_least_squares_regression_all_k_lambda_0.50.png, id=139, 722.7pt x 722.7pt>
+File: ../figures/normalized_least_squares_regression_all_k_lambda_0.50.png Graphic file (type png)
+<use ../figures/normalized_least_squares_regression_all_k_lambda_0.50.png>
+Package pdftex.def Info: ../figures/normalized_least_squares_regression_all_k_lambda_0.50.png  used on input line 332.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+<../figures/normalized_least_squares_losses_for_k_lambda_0.50.png, id=140, 722.7pt x 722.7pt>
+File: ../figures/normalized_least_squares_losses_for_k_lambda_0.50.png Graphic file (type png)
+<use ../figures/normalized_least_squares_losses_for_k_lambda_0.50.png>
+Package pdftex.def Info: ../figures/normalized_least_squares_losses_for_k_lambda_0.50.png  used on input line 336.
+(pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
+<../figures/normalized_l1_regression_all_k_lambda_0.50.png, id=141, 722.7pt x 722.7pt>
 File: ../figures/normalized_l1_regression_all_k_lambda_0.50.png Graphic file (type png)
 <use ../figures/normalized_l1_regression_all_k_lambda_0.50.png>
-Package pdftex.def Info: ../figures/normalized_l1_regression_all_k_lambda_0.50.png  used on input line 332.
+Package pdftex.def Info: ../figures/normalized_l1_regression_all_k_lambda_0.50.png  used on input line 342.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 []\T1/pplj/m/n/9 (a) |L1 Loss Re-gres-sion for all $\OML/zplm/m/it/9 k$ \T1/pplj/m/n/9 us-ing
  []
 
-<../figures/normalized_l1_losses_for_k_lambda_0.50.png, id=140, 722.7pt x 722.7pt>
+<../figures/normalized_l1_losses_for_k_lambda_0.50.png, id=142, 722.7pt x 722.7pt>
 File: ../figures/normalized_l1_losses_for_k_lambda_0.50.png Graphic file (type png)
 <use ../figures/normalized_l1_losses_for_k_lambda_0.50.png>
-Package pdftex.def Info: ../figures/normalized_l1_losses_for_k_lambda_0.50.png  used on input line 336.
+Package pdftex.def Info: ../figures/normalized_l1_losses_for_k_lambda_0.50.png  used on input line 346.
 (pdftex.def)             Requested size: 155.99501pt x 155.99501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 []\T1/pplj/m/n/9 (b) |Train-ing and Test Loss for L1 Loss
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 \T1/pplj/m/n/9 Re-gres-sion us-ing No-ma-l-ized Bai-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
 []\T1/pplj/m/n/10 Figure 3: |Us-ing nor-mal-ized
  []
 
-[10 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k_lambda_0.50.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k_lambda_0.50.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
+[10 </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_least_squares_regression_all_k_lambda_0.50.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_least_squares_losses_for_k_lambda_0.50.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_regression_all_k_lambda_0.50.png> </Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/../figures/normalized_l1_losses_for_k_lambda_0.50.png>] (/Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 8.
 
@@ -892,18 +902,18 @@ Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: F71FBB3100222692AD4562F7A2FE4176;193.
  ) 
 Here is how much of TeX's memory you used:
- 14781 strings out of 478994
- 226655 string characters out of 5858183
+ 14793 strings out of 478994
+ 227463 string characters out of 5858183
  727909 words of memory out of 5000000
- 31833 multiletter control sequences out of 15000+600000
+ 31843 multiletter control sequences out of 15000+600000
  455712 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,12n,117p,446b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (11 pages, 635140 bytes).
+Output written on /Users/aakarsh/src/TUE-SPRING-2024/SML/hw5/doc/hw5.pdf (11 pages, 738563 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 222 PDF objects out of 1000 (max. 8388607)
  167 compressed objects within 2 object streams
  79 named destinations out of 1000 (max. 500000)
- 1093 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

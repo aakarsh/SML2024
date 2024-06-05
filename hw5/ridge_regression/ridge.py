@@ -136,7 +136,7 @@ def get_loss_for_type(type, f_X, Y, w, lmdb_reg):
     if type == 'l1':
         return np.abs(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
     elif type == 'ridge':
-       return np.square(f_X - Y).sum + lmdb_reg * (w ** 2).sum()
+       return np.square(f_X - Y).sum() + lmdb_reg * (w ** 2).sum()
     elif type == 'least_squares':
        return np.square(f_X - Y).sum()
    
