@@ -1,6 +1,12 @@
 \documentclass{./tufte-handout}
 
-\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage{amsmath, amssymb}
+
 \usepackage{graphicx}
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 \graphicspath{{graphics/}}
@@ -44,78 +50,139 @@
 
 \section{Exercise 1: Ridge Regression}
 
-\subsection{1. (2 points) In the following you have to implement least squares and ridge regression (both L2-loss)}
+\begin{enumerate}[(a)]
+\item \textbf{(2 points)} In the following you have to implement least squares and ridge regression (both L2-loss)
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{w = LeastSquares(Designmatrix,Y)}:
-    \begin{enumerate}
-    \item  input: design matrix $\Phi \in R^{n \times d}$ and the outputs $Y \in \mathbb{R}^n$ (column vector)
+    \begin{itemize}
+    \item  input: design matrix $\Phi \in R^{n  \times d}$ and the outputs $Y \in \mathbb{R}^n$ (column vector)
     \item output: weight vector w of least squares regression as column vector
-    \end{enumerate}
+    \end{itemize}
     \item  \textbf{w = RidgeRegression(Designmatrix,Y,Lambda)}:
-    \begin{enumerate}
+    \begin{itemize}
         \item input: the design matrix $\Phi \in \mathbb{R}^n \times d$, the outputs 
         $Y \in \mathbb{R}^n$ (column vector), and the regularization
         parameter $\lambda \in \mathbb{R}^+ := \{x \in \mathbb{R}|x \geq 0\}$.
         \item output: weight vector w of ridge regression as column vector. Use the non-normalized version
         $w = {(\phi^T \phi + \lambda \mathbb{1}_d)}^{-1}\phi^T Y$ 
-    \end{enumerate}
+    \end{itemize}
     
     Note that that the regression with L1-loss is already provided in 
         \textbf{L1LossRegression(Designmatrix,Y,Lambda)}
-\end{enumerate}
+\end{itemize}
 
 \textbf{Answer:}
 
-\subsection{2. (1 points) Let us assume that $d =1$. Write a function Basis(X, k) to generate the design matrix using 
-the orthogonal Fourier basis functions, with}
-\begin{enumerate}
+\item  \textbf{(1 points)} Let us assume that $d =1$. Write a function Basis(X, k) to generate the design matrix using 
+the orthogonal Fourier basis functions, with
+\begin{itemize}
     \item input: the input data matrix $X \in \mathbb{R}^{n \times 1}$ and 
     the maximal frequency $k$ of the Fourier basis. 
     \item output: the design matrix $\phi \in \mathbb{R}^{n \times (2k+1)}$  
     using the Fourier basis functions: 
-   
     $\phi_{i,0} = 1$ for all $i = 1, . . . , n$ and 
     $\phi_{i,2l-1} = \cos(2\pi l x_i)$ and 
     $\phi_{i,2l} = \sin(2\pi l x_i)$ for all 
     $i = 1, . . . , n$ and $l = 1, . . . , k$.
-\end{enumerate}
+\end{itemize}
 
-\subsection{
-In the first example we have only one feature $(d = )$ 
-and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$. 
-The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$. First Plot 
-the training data $(Xtrain, Ytrain)_{i=1}^{1000}$. }
+
+\item In the first example we have only one feature $(d = )$ and thus we want to learn the function $f: \mathbb{R} \to \mathbb{R}$.  The data is given in \textbf{onedim.data.py} containing $Xtrain, Xtest, Ytrain, Ytest \in \mathbb{R}^{1000 \times 1}$.  First Plot the training data ${(Xtrain, Ytrain)}_{i=1}^{1000}$.
+
 \begin{enumerate}
     \item \textbf{(1 Points)} Which loss functino ($L_1$ or $L_2$) is more appropriate for this
    kind of data? Justify this by checking the data plot.  Use in the next part only the regression method
    which your chosen loss (that is either regression or $L_1-loss$ with $L_2-regularizer$).
+
+    \textbf{Answer:} \\
+    We find that the ridge regression introduces a consistent bias  
+    towards the outliers in the data for  all our plots for different 
+    values of $k$. Thus in order to avoid this we use the \emph{L1LossRegression} 
+    which is less biased towards the outliers.
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_1.png}
+          \caption{$k=1$}
+        \end{subfigure}%
+        \hfill
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_2.png}
+          \caption{$k=2$}
+        \end{subfigure}
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_3.png}
+          \caption{$k=3$}
+        \end{subfigure}%
+        \hfill
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_5.png}
+          \caption{$k=5$}
+        \end{subfigure}
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_10.png}
+          \caption{$k=10$}
+        \end{subfigure}%
+        \hfill
+        \begin{subfigure}[b]{.5\textwidth}
+          \centering
+          \includegraphics[width=1.2\linewidth]{../figures/l1_vs_ridge_regression_k_15.png}
+          \caption{$k=15$}
+        \end{subfigure}
+        \hfill
+        \caption{Comparison of L1 and Ridge Regression for different values of $k=1,2,3,5,10,15$. We note 
+        that that ridge regression introduces a bias towards the outliers in the data}
+    \end{figure}
+    \FloatBarrier
     \item \textbf{(1 Points)} Use the basis function with $k=1, 2, 3, 5, 10, 15, 20$ from part b. to 
-   to fit the regularized version of the loss chosen in the previous part. Use regularization paramater $\lambda = 30$. 
-   Plot the resulting function $f_k$ (using as $x$ e.g 1000 evenly spaced points in $[0, 1]$) for all values
-   of $k$ together with the training data with: 
+   to fit the regularized version of the loss chosen in the previous part. Use regularization paramater 
+   $\lambda = 30$. Plot the resulting function $f_k$ (using as $x$ e.g 1000 evenly spaced points in $[0, 1]$) 
+   for all values of $k$ together with the training data with: 
 
    \begin{equation}
         f_k(x)  = \langle \phi(x), w_k \rangle = \sum_{i=1}^{2k+1} w_i^k \phi_{i}(x)
    \end{equation}
 
    Compute the loss, that is 
+
    \begin{equation}
     \frac{1}{n}  \sum_{i=1}^n L(Y_i, f(X_i))
    \end{equation}
+
    on the training and test data and plot training and test loss as a function of $k$.
    Repeat the same for $\lambda =0$ (unregularized version). How does increasing 
-   $k$ affect the estimated function $f_k$ ? What is the behavior of training and 
-   test error for increasing   $k$ (explanation on paper). 
+   $k$ affect the estimated function $f_k$ ? 
+
+   What is the behavior of training and test error for increasing 
+   $k$ (explanation on paper). 
+
+   \textbf{Answer:} \\
+   \begin{figure}
+    \centering
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/l1_regression_all_k.png}
+    \end{subfigure}%
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics{../figures/l1_losses_for_k.png}
+    \end{subfigure}
+   \end{figure}
+    \FloatBarrier
 
 \end{enumerate}
-
-\subsection{On observes overfitting when we use large number $k$ of basis functions. We 
+\FloatBarrier
+\item On observes overfitting when we use large number $k$ of basis functions. We 
 want to avoid this phenomenon by introduing a normalization of the basis functions according 
-to their complexity. One possible way to do this is to define a measure of complexity $\omega(f) \in \mathbb{R}^+$ as
+to their complexity. One possible way to do this is to define a measure of complexity $\Omega(f) \in \mathbb{R}^+$ as
 
 \begin{equation}
-    \omega(f) = \int_0^1 |f'(x)|^2  dx
+    \Omega(f) = \int_0^1 |f'(x)|^2  dx
 \end{equation}
 
 where $f'$ is the first derivative of $f$ at x and introduce new Fourier basis functions $\{\Psi_i(x)\}_{i \in \mathbb{N}^0}$ as
@@ -124,21 +191,20 @@ where $f'$ is the first derivative of $f$ at x and introduce new Fourier basis f
 \end{equation} 
 and 
 \begin{equation}
-    \Psi_i(x) = \frac{1}{\sqrt{\omega(\phi_i)}} \Phi_i(x) 
+    \Psi_i(x) = \frac{1}{\sqrt{\Omega(\phi_i)}} \Phi_i(x) 
 \end{equation}
 
-$i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and $\mathbb{N}^+ :=\mathbb{N}^0\\ \{0\}$.
+$i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and 
 \begin{enumerate}
-    \item \textbf{(1 point)} Show the new Fourier basis functions $\Psi = \Psi_i_{ i\in \mathbb{N}^+}$ all have the same 
-    complexity $\omega(\Psi_i)$. 
+    \item \textbf{(1 point)} Show the new Fourier basis functions $\Psi = {\Psi_i}_{ i\in \mathbb{N}^+}$ all have the same 
+    complexity $\Omega(\Psi_i)$. 
 
     \textbf{Answer:}
 
     Consider 
     \begin{align} 
-        \omega(\Phi_i) &= \int_0^1 |(\Phi_i)'(x)|^2 dx$ and $\omega(\Psi_i) = \int_0^1 |(\Psi_i)'(x)|^2 dx
-        &= \int_0^1 |D_x cos(2\pi i x)|^2 dx \\
-        &=  
+        \Omega(\Phi_i) &= \int_0^1 |(\Phi_i)'(x)|^2 dx
+        &= \int_0^1 |D_x cos(2\pi i x)|^2 dx 
     \end{align}
     
     \item \textbf{(1 point)} Derive the explict form of the new basis functions $\{\Psi_i\}_{i \in \mathbb{N}^0}$ and implement a 
@@ -155,18 +221,19 @@ $i \in \mathbb{N}^+$ where $\mathbb{N}^0 :=\{0, 1,2, \dots \}$ and $\mathbb{N}^+
 \end{enumerate}
 
 
-\subsection{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly 
-penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$:
+\item \textbf{(2 points)} We now consider a modified problem where instead of penalizing the weights one directly penalises the gradient of the estimated function $f_w(x) = \langle w, \Psi(x)\rangle$:
 
 \begin{equation}
-        w^k = argmin_{w \in \mathbb{R}^2k} \frac{1}{n} \sum_{i=1}^n (Y_i  - f_w(X_i))^2 + \lambda \omega(f_w)
+        w^k = argmin_{w \in \mathbb{R}^2k} \frac{1}{n} \sum_{i=1}^n (Y_i  - f_w(X_i))^2 + \lambda \Omega(f_w)
 \end{equation}
 
-where $\omega(f)$ is defined in part d. Show that when using the normalized Fourier basis $\Psi_i$ without the constant 
+where $\Omega(f)$ is defined in part d. Show that when using the normalized Fourier basis $\Psi_i$ without the constant 
 function $\Psi_0$ the above optimization problem is equivalent to ridge regression that is $\Omega(f_w) = ||w||^2$.
 
 Zip all plots (.png), scripts (.py), test (.pdf). In addition to the functions mentioned above, there 
 should be scripts to reproduce all the results you submit (plots, losses).
+
+\end{enumerate}
 
 \bibliography{sample-handout}
 \bibliographystyle{plainnat}
